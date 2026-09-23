@@ -4,15 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Zahra Khairani</title>
+    <style>
+        /* Pengaturan Dasar & Halaman A4 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        /* Container Ukuran Kertas A4 Presisi */
+        .cv-container {
+            width: 210mm;
+            min-height: 297mm;
+            background: #ffffff;
+            padding: 20mm 18mm;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: auto;
+        }
+
+        /* Header Layout: Teks di Kiri, Foto di Kanan */
+        header {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 15px;
+            margin-bottom: 18px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-text h1 {
+            font-size: 24pt;
+            color: #003366;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 15px;
+            font-size: 9.5pt;
+            color: #444;
+        }
+
+        .contact-item span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling Foto di Kanan */
+        .profile-photo {
+            width: 30mm;
+            height: 40mm;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        /* Styling Section & Judul */
+        section {
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 11pt;
+            color: #003366;
+            border-bottom: 1.5px solid #003366;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .profile-text {
+            font-size: 9.5pt;
+            text-align: justify;
+            color: #333;
+        }
+
+        /* Styling Item Pengalaman & Pendidikan */
+        .item {
+            margin-bottom: 10px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: bold;
+            font-size: 10pt;
+            color: #111;
+        }
+
+        .title {
+            color: #003366;
+        }
+
+        .date {
+            font-size: 9pt;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .subtitle {
+            font-size: 9pt;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 3px;
+        }
+
+        ul {
+            padding-left: 16px;
+            margin-top: 3px;
+        }
+
+        li {
+            font-size: 9.2pt;
+            margin-bottom: 2px;
+            color: #333;
+        }
+
+        /* Grid Keterampilan */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            font-size: 9.2pt;
+        }
+
+        /* Optimasi Pengaturan Cetak / Print ke PDF */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 15mm 15mm;
+                width: 100%;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="cv-container">
         <!-- HEADER -->
         <header>
-            <div class="header-profile">
-                <!-- Tambahan elemen Foto Profil -->
-                <img src="foto-profil.jpg" alt="Foto Zahra Khairani" class="profile-photo">
+            <div class="header-content">
                 <div class="header-text">
                     <h1>ZAHRA KHAIRANI</h1>
                     <div class="contact-info">
@@ -30,6 +204,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Foto Profil di Samping Kanan Pas foto 3x4 Rasio A4 -->
+                <img src="https://lh3.googleusercontent.com/d/1C4sQlhXbJ2i90mBUpC9tE4jFqC9p4m1D" alt="Foto Zahra Khairani" class="profile-photo">
             </div>
         </header>
 
